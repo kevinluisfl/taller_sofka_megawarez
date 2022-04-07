@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ISubcategoria {
 
-    public List<Subcategoria> getList();
+    public List<Subcategoria> getSubcategorias();
 
     public Subcategoria createSubcategoria(Subcategoria subcategoria);
 

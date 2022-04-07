@@ -3,6 +3,7 @@ package com.sofka.megawarez.service;
 import com.sofka.megawarez.domain.Categoria;
 import com.sofka.megawarez.repository.CategoriaRepository;
 import com.sofka.megawarez.service.interfaces.ICategoria;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,7 +19,7 @@ public class CategoriaService implements ICategoria {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Categoria> getList() {
+    public List<Categoria> getCategorias() {
         return (List<Categoria>) categoriaRepository.findAll();
     }
 
@@ -33,7 +34,6 @@ public class CategoriaService implements ICategoria {
     @Transactional
     public Categoria updateCategoria(Integer id, Categoria categoria) {
         categoria.setId(id);
-        ///categoria.setUpdatedAt(Instant.now());
         return categoriaRepository.save(categoria);
     }
 

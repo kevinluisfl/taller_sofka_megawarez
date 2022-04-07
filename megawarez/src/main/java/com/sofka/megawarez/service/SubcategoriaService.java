@@ -1,9 +1,9 @@
 package com.sofka.megawarez.service;
 
-import com.sofka.megawarez.domain.Categoria;
 import com.sofka.megawarez.domain.Subcategoria;
 import com.sofka.megawarez.repository.SubcategoriaRepository;
 import com.sofka.megawarez.service.interfaces.ISubcategoria;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +19,7 @@ public class SubcategoriaService implements ISubcategoria {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Subcategoria> getList() {
+    public List<Subcategoria> getSubcategorias() {
         return (List<Subcategoria>) subcategoriaRepository.findAll();
     }
 
